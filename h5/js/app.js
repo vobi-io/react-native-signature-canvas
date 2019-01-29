@@ -22,6 +22,8 @@ const content = `
     resizeCanvas();
     
     signaturePad = new SignaturePad(canvas);
+
+    signaturePad.onEnd = (a) => window.postMessage(signaturePad.toDataURL());
     
     clearButton.addEventListener("click", function (event) {
         signaturePad.clear();

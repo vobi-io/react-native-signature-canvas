@@ -43,9 +43,6 @@ class SignatureView extends Component {
     const injectedJavaScript = injectedSignaturePad + injectedApplication;
     let html = htmlContent(injectedJavaScript);
     html = html.replace('<%style%>', webStyle);
-    html = html.replace('<%description%>', descriptionText);
-    html = html.replace('<%confirm%>', confirmText);
-    html = html.replace('<%clear%>', clearText);
 
     this.source = { html };
   };
