@@ -21,9 +21,9 @@ const content = `
     window.onresize = resizeCanvas;
     resizeCanvas();
     
-    signaturePad = new SignaturePad(canvas);
+    signaturePad = new SignaturePad(canvas, {backgroundColor: "#FFFFFF"});
 
-    signaturePad.onEnd = (a) => window.postMessage(signaturePad.toDataURL());
+    signaturePad.onEnd = (a) => window.postMessage(signaturePad.toDataURL("image/jpeg"));
     
     clearButton.addEventListener("click", function (event) {
         signaturePad.clear();
